@@ -54,3 +54,17 @@ a:not([class]) {
   }
 }
 /* end reset */
+:root {
+  --background-color: #0f1c2e;
+  --primary-color: #1f3a5f;
+  --accent-color: #3d5a80;
+  --text-color: #ffffff;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
