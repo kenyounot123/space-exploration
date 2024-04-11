@@ -1,0 +1,17 @@
+.hero-container {
+  min-height: 800px;
+  position: relative;
+}
+.hero-title {
+  margin-top: 50px;
+  font-size: 4.5rem;
+  max-width: 70%;
+  line-height: 120%;
+}
+.hero-subtext {
+  color: var(#ffffffab);
+}
+.background-object {
+  position: absolute;
+  z-index: -1;
+}

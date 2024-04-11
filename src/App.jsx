@@ -4,6 +4,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 function App() {
   // gsap.registerPlugin(useGSAP);
@@ -19,6 +20,7 @@ function App() {
     <>
       {" "}
       <Navbar />
+      <Hero />
     </>
   );
 }
