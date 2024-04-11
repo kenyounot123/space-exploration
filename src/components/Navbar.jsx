@@ -3,9 +3,9 @@ function Navbar() {
   return (
     <div className="container">
       <ul className="navbar">
-        <li className="navbar-links">Timeline</li>
-        <li className="navbar-links">Achievements</li>
-        <li className="navbar-links">SpaceCraft</li>
+        <button className="navbar-buttons">Timeline</button>
+        <button className="navbar-buttons">Achievements</button>
+        <button className="navbar-buttons">SpaceCrafts</button>
       </ul>
     </div>
   );

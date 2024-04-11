@@ -3,11 +3,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 200px;
 }
-.navbar-links {
+.navbar-buttons {
   text-decoration: none;
   font-size: 1.2rem;
+  border: none;
+  padding: 10px;
+  margin: 0;
+  background: none;
+  color: white;
+  transition: 0.5s background-color ease-in, 0.5s color ease-in;
+}
+.navbar-buttons:hover {
+  background-color: antiquewhite;
+  color: black;
 }
 .logo {
   font-size: 1.5rem;
