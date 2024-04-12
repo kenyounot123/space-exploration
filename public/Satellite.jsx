@@ -13,13 +13,13 @@ import { useGLTF } from "@react-three/drei";
 export default function Model(props) {
   const { nodes, materials } = useGLTF("/satellite.gltf");
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={[0.3, 0.3, 0.3]}>
       <group rotation={[-1.755, 0.06, 2.589]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group
             position={[0, 0, 0.186]}
             rotation={[-Math.PI / 2, Math.PI / 2, 0]}
-            scale={[0.675, 0.683, 0.675]}
+            scale={[0.775, 0.783, 0.775]}
           >
             <mesh
               geometry={nodes.Object_4.geometry}
