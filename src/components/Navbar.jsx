@@ -1,7 +1,7 @@
 import "../stylesheets/navbar.css";
 function Navbar() {
   return (
-    <header>
+    <header className="navbar-container">
       <nav className="navbar">
         <button className="navbar-buttons">Timeline</button>
         <button className="navbar-buttons">Achievements</button>

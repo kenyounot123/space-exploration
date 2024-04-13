@@ -1,13 +1,17 @@
 import "../stylesheets/hero.css";
-import Background from "./Background";
+import FrontEarth from "./FrontEarth";
 function Hero() {
   return (
     <section className="hero-container container">
-      <Background />
-      <h1 className="hero-title">Discover The Wonders of Space Exploration</h1>
-      <span className="hero-subtext">
-        Embark on a Journey to Explore the Vastness of the Universe
-      </span>
+      <div className="text">
+        <h1 className="hero-title">
+          Discover The Wonders of Space Exploration
+          <span className="hero-subtext">
+            Embark on a Journey to Explore the Vastness of the Universe
+          </span>
+        </h1>
+      </div>
+      <FrontEarth />
     </section>
   );
 }

@@ -1,17 +1,35 @@
 .hero-container {
   min-height: 800px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hero-title {
-  margin-top: 50px;
-  font-size: 4.5rem;
-  max-width: 70%;
+  margin: 0 auto;
+  font-size: 3.5rem;
+  max-width: 50%;
   line-height: 120%;
+  z-index: 1;
+  position: relative;
 }
 .hero-subtext {
-  color: var(#ffffffab);
-}
-.background-object {
+  color: var(--accent-color);
+  margin: 0 auto;
   position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  font-size: 1rem;
+  line-height: 100%;
+}
+
+.earth-canvas-container {
+  width: 800px;
+  height: 100%;
   z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 50px;
+  overflow: hidden;
 }
