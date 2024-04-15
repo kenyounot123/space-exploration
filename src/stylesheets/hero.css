@@ -1,8 +1,7 @@
 .hero-container {
-  min-height: 800px;
+  min-height: 700px;
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .hero-title {
@@ -12,24 +11,31 @@
   line-height: 120%;
   z-index: 1;
   position: relative;
+  color: var(--text-color);
 }
-.hero-subtext {
+.hero-button {
   color: var(--accent-color);
   margin: 0 auto;
   position: absolute;
   bottom: 0;
   left: 0;
-  transform: translateY(100%);
-  font-size: 1rem;
-  line-height: 100%;
+  transform: translateY(120%);
+  font-size: 1.5rem;
+  border-radius: 2em;
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+  padding: 0.5em 4em;
 }
-
+.hero-button:hover {
+  color: black;
+  background-color: var(--secondary-accent-color);
+}
 .earth-canvas-container {
   width: 800px;
   height: 100%;
   z-index: -1;
   position: absolute;
-  top: 0;
+  top: 20px;
   right: 50px;
   overflow: hidden;
 }

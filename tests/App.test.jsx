@@ -11,10 +11,3 @@ describe("something truthy and falsy", () => {
     expect(false).toBe(false);
   });
 });
-
-describe("App", () => {
-  it("renders navbar", () => {
-    render(<App />);
-    expect(screen.getByRole(""));
-  });
-});

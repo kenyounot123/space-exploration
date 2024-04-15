@@ -6,9 +6,7 @@ function Hero() {
       <div className="text">
         <h1 className="hero-title">
           Discover The Wonders of Space Exploration
-          <span className="hero-subtext">
-            Embark on a Journey to Explore the Vastness of the Universe
-          </span>
+          <button className="hero-button">Continue</button>
         </h1>
       </div>
       <FrontEarth />

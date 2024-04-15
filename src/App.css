@@ -4,12 +4,3 @@
   z-index: -1;
   position: fixed;
 }
-.earth-canvas-container {
-  width: 800px;
-  height: 100%;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  right: 50px;
-  overflow: hidden;
-}

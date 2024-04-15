@@ -55,13 +55,13 @@ a:not([class]) {
 }
 /* end reset */
 :root {
-  --background-color: #0f1c2e;
-  --primary-color: #1f3a5f;
-  --accent-color: #3d5a80;
-  --text-color: #ffffff;
+  --background-color: black;
+  --accent-color: #7c77b9;
+  --text-color: #00b48a;
+  --secondary-accent-color: #fde74c;
 }
 body {
-  background-color: black;
+  background-color: var(--background-color);
   color: var(--text-color);
   font-family: "Montserrat", sans-serif;
 }

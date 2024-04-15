@@ -1,0 +1,25 @@
+.timeline-container {
+  min-height: 750px;
+  position: relative;
+}
+.moon-canvas-container {
+  height: 500px;
+  min-width: 500px;
+}
+.content {
+  width: 50%;
+}
+.timeline-content {
+  border: 2px solid var(--accent-color);
+  border-radius: 20px;
+  padding: 70px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (min-width: 750px) {
+  .info {
+    display: flex;
+    align-items: center;
+  }
+}

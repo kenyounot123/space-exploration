@@ -9,7 +9,7 @@ const Star = () => {
 
   return (
     <mesh position={[x, y, z]}>
-      <sphereGeometry args={[0.6, 14, 16]} />
+      <sphereGeometry args={[0.6, 15, 3]} />
       <meshBasicMaterial color={0xffffff} />
     </mesh>
   );

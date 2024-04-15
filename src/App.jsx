@@ -1,16 +1,15 @@
 import "./App.css";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 import Background from "./components/Background";
-import FrontEarth from "./components/FrontEarth";
+import Timeline from "./components/Timeline";
 function App() {
   return (
     <>
       <Background />
       <Navbar />
       <Hero />
+      <Timeline />
     </>
   );
 }
