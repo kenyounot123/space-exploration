@@ -13,13 +13,17 @@
   border: 2px solid var(--accent-color);
   border-radius: 20px;
   padding: 70px;
-  width: 50%;
   margin: 0 auto;
+  max-width: 80%;
+  height: 100%;
 }
 
 @media (min-width: 750px) {
   .info {
     display: flex;
     align-items: center;
+    width: 95%;
+    margin: 0 auto;
+    gap: 100px;
   }
 }

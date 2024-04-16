@@ -8,7 +8,6 @@ import MoonTimeline from "./MoonTimeline";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(TextPlugin);
 function Timeline() {
   const container = useRef();
 
@@ -68,7 +67,9 @@ function Timeline() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
             quisquam illum, ullam aut aperiam modi sequi nihil eum dolore fugiat
             voluptatibus debitis molestiae impedit beatae fugit hic. Quam,
-            adipisci ut.
+            adipisci ut. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Itaque voluptatum blanditiis ullam reiciendis saepe, eveniet
+            cum
           </p>
         </section>
       </div>
