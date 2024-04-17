@@ -1,20 +1,22 @@
 import "./App.css";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+// import MainContainer from "./components/MainContainer";
 import { Suspense, lazy } from "react";
-import Loading from "./components/Loading";
-import Navbar from "./components/Navbar";
-import Background from "./components/Background";
-const Timeline = lazy(() => import("./components/Timeline"));
-const Hero = lazy(() => import("./components/Hero"));
-// import Hero from "./components/Hero";
+const MainContainer = lazy(() => import("./components/MainContainer"));
 function App() {
   return (
     <>
-      <Suspense fallback={<Loading />}>
-        <Navbar />
-        <Background />
-        <Hero />
-        <Timeline />
-      </Suspense>
+      <Canvas
+        shadows
+        camera={{ fov: 75, near: 0.5, far: 1000, position: [0, 3, 3] }}
+      >
+        <Suspense fallback={null}>
+          <color attach={"background"} args={["black"]} />
+          <OrbitControls />
+          <MainContainer />
+        </Suspense>
+      </Canvas>
     </>
   );
 }

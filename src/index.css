@@ -64,8 +64,16 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: "Montserrat", sans-serif;
+  width: 100vw;
+  height: 100vh;
 }
 .container {
   width: 90%;
   margin: 0 auto;
+}
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
