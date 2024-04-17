@@ -1,8 +1,23 @@
 import "../stylesheets/hero.css";
-import FrontEarth from "./FrontEarth";
 import gsap from "gsap";
+import { lazy, Suspense, startTransition } from "react";
 import { ScrollToPlugin } from "gsap/all";
+import { Canvas } from "@react-three/fiber";
+import Loading from "./Loading";
+
 gsap.registerPlugin(ScrollToPlugin);
+const Earth = lazy(() => import("/public/Earth/Earth.jsx"));
+function FrontEarth() {
+  return (
+    <div className="earth-canvas-container">
+      <Canvas>
+        <directionalLight position={[15, 5, 0]} />
+        <Earth />
+      </Canvas>
+    </div>
+  );
+}
+
 function Hero() {
   const handleClick = () => {
     const nextViewportHeight = window.innerHeight + window.scrollY;

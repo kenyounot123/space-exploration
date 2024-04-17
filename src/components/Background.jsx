@@ -1,5 +1,4 @@
-import { Canvas, useFrame } from "@react-three/fiber";
-import { useRef } from "react";
+import { Canvas } from "@react-three/fiber";
 
 const Star = () => {
   // Generate a random position for the star

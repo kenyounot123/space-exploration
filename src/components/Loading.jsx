@@ -1,5 +1,5 @@
-const Loading = ({ show }) => {
-  return show ? <div className="loading">Loading...</div> : null;
+const Loading = () => {
+  return <h2>🌀 Loading...</h2>;
 };
 
 export default Loading;

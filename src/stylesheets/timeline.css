@@ -5,6 +5,7 @@
 .moon-canvas-container {
   height: 500px;
   min-width: 500px;
+  margin-top: 50px;
 }
 .content {
   width: 50%;

@@ -1,10 +1,29 @@
 import "../stylesheets/timeline.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useRef, Suspense } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { TextPlugin } from "gsap/all";
-import MoonTimeline from "./MoonTimeline";
+
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { lazy } from "react";
+import Loading from "./Loading";
+
+const Moon = lazy(() => import("/public/Moon/Moon.jsx"));
+
+function MoonModel() {
+  return (
+    <div className="moon-canvas-container ">
+      <Canvas>
+        <OrbitControls enableZoom={false} />
+        <ambientLight intensity={1.5} />
+        <Suspense fallback={null}>
+          <Moon />
+        </Suspense>
+      </Canvas>
+    </div>
+  );
+}
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -16,7 +35,6 @@ function Timeline() {
       // gsap code here...
       gsap.set(".timeline-title", { opacity: 0 });
       gsap.set(".moon-canvas-container", { opacity: 0 });
-      //   gsap.set(".content", { opacity: 0 });
       gsap.to(".timeline-title", {
         opacity: 1,
         scrollTrigger: {
@@ -61,7 +79,7 @@ function Timeline() {
         July 20, 1969 <br></br>First Human Moon Landing
       </h1>
       <div className="info">
-        <MoonTimeline />
+        <MoonModel />
         <section className="content">
           <p className="timeline-content">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,

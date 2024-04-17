@@ -15,7 +15,6 @@ export default function Model(props) {
   const moonRef = useRef();
 
   useFrame((state, delta) => {
-    // Rotate the moon model
     moonRef.current.rotation.y += 0.2 * delta; // Adjust the rotation speed as needed
   });
   const { nodes, materials } = useGLTF("/Moon/scene-v1.glb");
