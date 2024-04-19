@@ -1,22 +1,38 @@
 import "./App.css";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-// import MainContainer from "./components/MainContainer";
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useState, useRef } from "react";
+import Loading from "./components/Loading";
+import InfoCard from "./components/InfoCard";
+
 const MainContainer = lazy(() => import("./components/MainContainer"));
 function App() {
+  const [planetClicked, setPlanetClicked] = useState(null);
+  const [planet, setPlanet] = useState({});
+  const canvasRef = useRef();
+
+  function handleClick(model) {
+    setPlanetClicked((planetClicked) => !planetClicked);
+    setPlanet({ ...model });
+  }
   return (
     <>
-      <Canvas
-        shadows
-        camera={{ fov: 75, near: 0.5, far: 1000, position: [0, 3, 3] }}
-      >
-        <Suspense fallback={null}>
+      <Suspense fallback={<Loading />}>
+        {planetClicked && <InfoCard planet={planet} />}
+        <Canvas
+          ref={canvasRef}
+          shadows
+          camera={{ fov: 75, near: 0.5, far: 1000, position: [0, 3, 20] }}
+        >
           <color attach={"background"} args={["black"]} />
           <OrbitControls />
-          <MainContainer />
-        </Suspense>
-      </Canvas>
+
+          <MainContainer
+            planetClicked={planetClicked}
+            handleClick={handleClick}
+          />
+        </Canvas>
+      </Suspense>
     </>
   );
 }

@@ -1,0 +1,21 @@
+.card-container {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  max-width: 500px;
+  min-height: 500px;
+  padding: 2em;
+  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--secondary-accent-color);
+  border-radius: 20px;
+}
+.zoom-ui {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}

@@ -4,7 +4,7 @@ const Sun = memo(() => {
   const [sunTexture] = useTexture(["/assets/sunTexture.jpeg"]);
   return (
     // Radius , x , y
-    <mesh position={[0, 0, 0]}>
+    <mesh castShadow position={[0, 0, 0]}>
       <sphereGeometry args={[2, 64, 64]} />
       <meshPhongMaterial
         map={sunTexture}
