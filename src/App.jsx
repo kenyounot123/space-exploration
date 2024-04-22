@@ -1,6 +1,11 @@
 import "./App.css";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import {
+  Selection,
+  Outline,
+  EffectComposer,
+} from "@react-three/postprocessing";
 import { Suspense, lazy, useState, useRef } from "react";
 import Loading from "./components/Loading";
 import InfoCard from "./components/InfoCard";
@@ -25,14 +30,24 @@ function App() {
         <Canvas
           ref={canvasRef}
           shadows
-          camera={{ fov: 75, near: 0.5, far: 1000, position: [16, 8, 19] }}
+          camera={{ fov: 75, near: 0.5, far: 1000, position: [0, 10, 0] }}
         >
           <color attach={"background"} args={["black"]} />
           <OrbitControls makeDefault />
-          <MainContainer
-            planetClicked={planetClicked}
-            handleClick={handleClick}
-          />
+          <Selection>
+            <EffectComposer multisampling={8} autoClear={false}>
+              <Outline
+                blur
+                visibleEdgeColor="white"
+                edgeStrength={100}
+                width={1000}
+              />
+            </EffectComposer>
+            <MainContainer
+              planetClicked={planetClicked}
+              handleClick={handleClick}
+            />
+          </Selection>
         </Canvas>
       </Suspense>
     </>

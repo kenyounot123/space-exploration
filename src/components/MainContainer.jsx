@@ -2,8 +2,6 @@ import { Stars, useBounds, Bounds } from "@react-three/drei";
 import { Perf } from "r3f-perf";
 import CameraPositionLog from "../helpers/CameraPositionLog";
 import Sun from "./Sun";
-// import Earth from "./Earth";
-// import Mars from "./Mars";
 import Planet from "./Planet";
 import Data from "../helpers/data";
 const MainContainer = ({ handleClick, planetClicked }) => {
