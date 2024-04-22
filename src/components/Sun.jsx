@@ -4,7 +4,7 @@ const Sun = memo(() => {
   const [sunTexture] = useTexture(["/assets/sunTexture.jpeg"]);
   return (
     // Radius , x , y
-    <mesh castShadow position={[0, 0, 0]}>
+    <mesh position={[0, 0, 0]}>
       <sphereGeometry args={[2, 64, 64]} />
       <meshPhongMaterial
         map={sunTexture}
@@ -12,7 +12,7 @@ const Sun = memo(() => {
         emissiveIntensity={0.6}
         emissive={0xffffff}
       />
-      <pointLight castShadow />
+      <pointLight castShadow intensity={400} />
     </mesh>
   );
 });

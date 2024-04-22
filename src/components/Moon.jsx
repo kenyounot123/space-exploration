@@ -7,7 +7,6 @@ const Moon = memo(() => {
     <mesh castShadow receiveShadow position={[4, 0, 0]}>
       <sphereGeometry args={[0.5, 64, 64]} />
       <meshPhongMaterial map={moonTexture} />
-      <ambientLight intensity={2} />
     </mesh>
   );
 });
