@@ -12,11 +12,27 @@
   color: var(--secondary-accent-color);
   border-radius: 20px;
 }
-
-.zoom-ui {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
+.card-btn {
+  color: var(--secondary-accent-color);
+  border: 2px solid var(--accent-color);
+  background-color: var(--text-color);
+  padding: 0.5em 1em;
+  border-radius: 12px;
+  font-size: 1.5rem;
+}
+.card-btn:hover {
+  border: 2px solid white;
+}
+.card-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.card-type {
+  font-size: 1rem;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }

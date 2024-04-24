@@ -1,28 +1,17 @@
 import { Stars, useBounds, Bounds } from "@react-three/drei";
-import { Perf } from "r3f-perf";
-import CameraPositionLog from "../helpers/CameraPositionLog";
-import Sun from "./Sun";
+// import { Perf } from "r3f-perf";
 import Planet from "./Planet";
 import Data from "../helpers/data";
-const MainContainer = ({ handleClick, planetClicked }) => {
+const MainContainer = ({ handleClick }) => {
   return (
     <>
-      <Perf />
-      <CameraPositionLog event="mousedown" />
+      {/* <Perf /> */}
       <Stars />
-      <Bounds fit clip observe margin={1.7}>
+      <Bounds fit clip observe margin={1.5}>
         <SelectToZoom>
-          <Sun />
           {Data.map((planet) => (
-            <Planet
-              key={planet.id}
-              planetClicked={planetClicked}
-              handleClick={handleClick}
-              data={planet}
-            />
+            <Planet key={planet.id} handleClick={handleClick} data={planet} />
           ))}
-          {/* <Earth planetClicked={planetClicked} handleClick={handleClick} />
-          <Mars /> */}
         </SelectToZoom>
       </Bounds>
     </>
@@ -33,9 +22,11 @@ function SelectToZoom({ children }) {
   const bounds = useBounds();
   return (
     <group
-      onClick={(e) => (e.stopPropagation(), bounds.refresh(e.object).fit())}
+      onClick={(e) => (
+        e.stopPropagation(), e.delta <= 2 && bounds.refresh(e.object).fit()
+      )}
       onPointerMissed={(e) => {
-        e.button === 0 && bounds.refresh();
+        e.button === 0 && bounds.refresh().fit();
       }}
     >
       {children}

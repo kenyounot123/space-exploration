@@ -20,17 +20,20 @@ function App() {
 
   // When planet is clicked, mesh is passed in as parameter
   function handleClick(model) {
-    setPlanetClicked((planetClicked) => !planetClicked);
+    setPlanetClicked(true);
     setPlanet({ ...model });
   }
+
   return (
     <>
       <Suspense fallback={<Loading />}>
-        {planetClicked && <InfoCard planet={planet} />}
+        {planetClicked && (
+          <InfoCard planet={planet} onClick={() => setPlanetClicked(false)} />
+        )}
         <Canvas
           ref={canvasRef}
           shadows
-          camera={{ fov: 75, near: 0.5, far: 1000, position: [0, 10, 0] }}
+          camera={{ fov: 75, near: 0.5, far: 1000, position: [10, 10, 5] }}
         >
           <color attach={"background"} args={["black"]} />
           <OrbitControls makeDefault />
@@ -39,14 +42,11 @@ function App() {
               <Outline
                 blur
                 visibleEdgeColor="white"
-                edgeStrength={100}
-                width={1000}
+                edgeStrength={10}
+                width={1500}
               />
             </EffectComposer>
-            <MainContainer
-              planetClicked={planetClicked}
-              handleClick={handleClick}
-            />
+            <MainContainer handleClick={handleClick} />
           </Selection>
         </Canvas>
       </Suspense>
