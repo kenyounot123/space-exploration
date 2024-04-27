@@ -38,8 +38,34 @@ function InfoCard({ planet, onClick }) {
             </button>
           </div>
         )}
-        {page === "info" && <div className="card-content"></div>}
-        {page === "links" && <div className="card-content"></div>}
+        {page === "info" && (
+          <>
+            <button onClick={handleHomeClick}>Back</button>
+            <div className="content">
+              <h2>Introduction</h2>
+              <p>{planet.introduction}</p>
+              <h2>Size and Distance</h2>
+              <p>{planet.sizeDescription}</p>
+            </div>
+          </>
+        )}
+        {page === "links" && (
+          <div className="card-content">
+            <button className="card-btn">
+              <a
+                target="_blank"
+                href={`https://science.nasa.gov/${planet.name.toLowerCase()}/facts/`}
+              >
+                More details
+              </a>
+            </button>
+            <button className="card-btn">
+              <a target="_blank" href={planet.links.video}>
+                Video
+              </a>
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

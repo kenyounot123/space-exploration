@@ -1,11 +1,11 @@
 import { Stars, useBounds, Bounds } from "@react-three/drei";
-// import { Perf } from "r3f-perf";
+import { Perf } from "r3f-perf";
 import Planet from "./Planet";
 import Data from "../helpers/data";
 const MainContainer = ({ handleClick }) => {
   return (
     <>
-      {/* <Perf /> */}
+      <Perf />
       <Stars />
       <Bounds fit clip observe margin={1.5}>
         <SelectToZoom>

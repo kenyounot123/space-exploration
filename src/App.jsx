@@ -8,12 +8,12 @@ import {
 } from "@react-three/postprocessing";
 import { Suspense, lazy, useState, useRef } from "react";
 import Loading from "./components/Loading";
-import InfoCard from "./components/InfoCard";
-
+// import InfoCard from "./components/InfoCard";
+const InfoCard = lazy(() => import("./components/InfoCard"));
 const MainContainer = lazy(() => import("./components/MainContainer"));
 function App() {
   // State that tells us whether a planet was clicked or not
-  const [planetClicked, setPlanetClicked] = useState(null);
+  const [planetClicked, setPlanetClicked] = useState(false);
   // Sstate that tells us which planet was clicked
   const [planet, setPlanet] = useState({});
   const canvasRef = useRef();
@@ -28,7 +28,11 @@ function App() {
     <>
       <Suspense fallback={<Loading />}>
         {planetClicked && (
-          <InfoCard planet={planet} onClick={() => setPlanetClicked(false)} />
+          <InfoCard
+            key={planet.id}
+            planet={planet}
+            onClick={() => setPlanetClicked(false)}
+          />
         )}
         <Canvas
           ref={canvasRef}
