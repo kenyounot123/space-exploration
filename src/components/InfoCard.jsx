@@ -41,7 +41,7 @@ function InfoCard({ planet, onClick }) {
         {page === "info" && (
           <>
             <button onClick={handleHomeClick}>Back</button>
-            <div className="content">
+            <div className="overflow-enable">
               <h2>Introduction</h2>
               <p>{planet.introduction}</p>
               <h2>Size and Distance</h2>
@@ -50,21 +50,24 @@ function InfoCard({ planet, onClick }) {
           </>
         )}
         {page === "links" && (
-          <div className="card-content">
-            <button className="card-btn">
-              <a
-                target="_blank"
-                href={`https://science.nasa.gov/${planet.name.toLowerCase()}/facts/`}
-              >
-                More details
-              </a>
-            </button>
-            <button className="card-btn">
-              <a target="_blank" href={planet.links.video}>
-                Video
-              </a>
-            </button>
-          </div>
+          <>
+            <button onClick={handleHomeClick}>Back</button>
+            <div className="card-content">
+              <button className="card-btn">
+                <a
+                  target="_blank"
+                  href={`https://science.nasa.gov/${planet.name.toLowerCase()}/facts/`}
+                >
+                  More details
+                </a>
+              </button>
+              <button className="card-btn">
+                <a target="_blank" href={planet.links.video}>
+                  Video
+                </a>
+              </button>
+            </div>
+          </>
         )}
       </div>
     </div>
