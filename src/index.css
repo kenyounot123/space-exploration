@@ -58,7 +58,6 @@ a:not([class]) {
   --background-color: black;
   --accent-color: #7c77b9;
   --text-color: white;
-  --secondary-accent-color: blue;
 }
 body {
   background-color: var(--background-color);

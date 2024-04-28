@@ -9,8 +9,15 @@ import { Suspense, lazy, useRef } from "react";
 import Loading from "./Loading";
 import InfoCard from "./InfoCard";
 // import { Perf } from "r3f-perf";
-import Planet from "./Planet";
+
 import Data from "../helpers/data";
+const Planet = lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(import("./Planet"));
+    }, 5000);
+  });
+});
 const MainContainer = ({
   planetClicked,
   setPlanetClicked,
