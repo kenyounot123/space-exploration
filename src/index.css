@@ -57,8 +57,8 @@ a:not([class]) {
 :root {
   --background-color: black;
   --accent-color: #7c77b9;
-  --text-color: #00b48a;
-  --secondary-accent-color: #fde74c;
+  --text-color: white;
+  --secondary-accent-color: blue;
 }
 body {
   background-color: var(--background-color);

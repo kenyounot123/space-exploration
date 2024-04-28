@@ -40,7 +40,9 @@ function InfoCard({ planet, onClick }) {
         )}
         {page === "info" && (
           <>
-            <button onClick={handleHomeClick}>Back</button>
+            <button className="card-btn back-btn" onClick={handleHomeClick}>
+              Back
+            </button>
             <div className="overflow-enable">
               <h2>Introduction</h2>
               <p>{planet.introduction}</p>
@@ -51,7 +53,9 @@ function InfoCard({ planet, onClick }) {
         )}
         {page === "links" && (
           <>
-            <button onClick={handleHomeClick}>Back</button>
+            <button className="card-btn back-btn" onClick={handleHomeClick}>
+              Back
+            </button>
             <div className="card-content">
               <button className="card-btn">
                 <a
