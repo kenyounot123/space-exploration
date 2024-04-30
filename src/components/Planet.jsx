@@ -2,12 +2,13 @@ import { useTexture } from "@react-three/drei";
 import { Select } from "@react-three/postprocessing";
 import { memo, useEffect, useState } from "react";
 
+// Make sure our planets won't be rerendered if its props has not changed using memo()
 const Planet = memo(({ handleClick, data }) => {
   const [hovered, setHovered] = useState(false);
   const planet = data;
+  // Get textures and load using useTexture
   const { texture, normalMap, specMap, nightMap, ringTexture } =
     planet.textures;
-
   const texturePaths = [
     texture || false,
     normalMap || false,

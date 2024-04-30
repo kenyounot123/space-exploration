@@ -11,6 +11,7 @@ import InfoCard from "./InfoCard";
 // import { Perf } from "r3f-perf";
 
 import Data from "../helpers/data";
+// Make the loading screen last longer
 const Planet = lazy(() => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -24,6 +25,7 @@ const MainContainer = ({
   planet,
   setPlanet,
 }) => {
+  // Update state of whether a planet was clicked or not and which planet it was
   function handleClick(model) {
     setPlanetClicked(true);
     setPlanet({ ...model });
@@ -37,7 +39,7 @@ const MainContainer = ({
           <InfoCard
             key={planet.id}
             planet={planet}
-            onClick={() => setPlanetClicked(false)}
+            setPlanetClicked={() => setPlanetClicked(false)}
           />
         )}
         <Canvas
@@ -65,11 +67,16 @@ const MainContainer = ({
             <Bounds fit clip observe margin={1.5}>
               <SelectToZoom>
                 {Data.map((planet) => (
-                  <Planet
-                    key={planet.id}
-                    handleClick={handleClick}
-                    data={planet}
-                  />
+                  <>
+                    {planet.orbitRadius && (
+                      <Orbits radius={planet.orbitRadius} key={planet.id} />
+                    )}
+                    <Planet
+                      key={planet.id}
+                      handleClick={handleClick}
+                      data={planet}
+                    />
+                  </>
                 ))}
               </SelectToZoom>
             </Bounds>
@@ -93,6 +100,15 @@ function SelectToZoom({ children }) {
     >
       {children}
     </group>
+  );
+}
+
+function Orbits({ radius }) {
+  return (
+    <mesh rotation-x={Math.PI / 2}>
+      <torusGeometry args={[radius, 0.1, 2, 100]} />
+      <meshBasicMaterial color={0x808080} />
+    </mesh>
   );
 }
 export default MainContainer;

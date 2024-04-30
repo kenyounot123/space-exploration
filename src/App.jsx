@@ -10,6 +10,7 @@ function App() {
   // State that tells us which planet was clicked
   const [planet, setPlanet] = useState({});
 
+  // Handle initial launch of our app
   const handleLaunch = () => {
     startTransition(() => {
       setLaunch(true);

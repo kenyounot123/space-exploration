@@ -2,10 +2,10 @@ import { useGSAP } from "@gsap/react";
 import { useState } from "react";
 import gsap from "gsap";
 
-function InfoCard({ planet, onClick }) {
+function InfoCard({ planet, setPlanetClicked }) {
   const [page, setPage] = useState("home");
   useGSAP(() => {
-    gsap.fromTo(".card-container", { x: -10 }, { x: 50 });
+    gsap.fromTo(".card-container", { x: -20 }, { x: 50 });
   }, [planet]);
 
   function handleInfoClick() {
@@ -33,7 +33,7 @@ function InfoCard({ planet, onClick }) {
             <button onClick={handleLinksClick} className="card-btn">
               Relevant Links
             </button>
-            <button onClick={onClick} className="card-btn">
+            <button onClick={setPlanetClicked} className="card-btn">
               Back To Solar System
             </button>
           </div>
