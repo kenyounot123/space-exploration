@@ -2,7 +2,7 @@ const planetData = [
   {
     id: 0,
     name: "Earth",
-    position: [20, 0, -4],
+    position: [17, 0, -4],
     type: "Planet",
     textures: {
       texture: "/assets/earthTexture.jpg",
@@ -14,7 +14,7 @@ const planetData = [
       video: "https://www.youtube.com/watch?v=HCDVN7DCzYE",
     },
     sphereGeometry: [2, 32, 32],
-    orbitRadius: 20,
+    orbitRadius: 18,
     introduction:
       "While Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface. Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun, all of which are made of rock and metal.Earth is the only planet in the solar system whose English name does not come from Greek or Roman mythology. The name was taken from Old English and Germanic. It simply means 'the ground.' There are, of course, many names for our planet in the thousands of languages spoken by the people of the third planet from the Sun.",
     sizeDescription:
@@ -24,12 +24,12 @@ const planetData = [
     id: 1,
     name: "Mars",
     type: "Planet",
-    position: [-16, 0, -9],
+    position: [-19, 0, -9],
     textures: {
       texture: "/assets/marsTexture.jpeg",
     },
     sphereGeometry: [1.5, 32, 32],
-    orbitRadius: 3,
+    orbitRadius: 21,
     links: {
       video: "https://www.youtube.com/watch?v=D8pnmwOXhoY",
     },
@@ -47,7 +47,7 @@ const planetData = [
       texture: "/assets/mercuryTexture.jpeg",
     },
     sphereGeometry: [1.4, 32, 32],
-    orbitRadius: 4,
+    orbitRadius: 11,
     links: {
       video: "https://www.youtube.com/watch?v=0KBjnNuhRHs",
     },
@@ -61,9 +61,9 @@ const planetData = [
     name: "Saturn",
     type: "Planet",
     hasRing: true,
-    position: [-20, 0, -20],
+    position: [-40, 0, -20],
     sphereGeometry: [2.3, 32, 32],
-    orbitRadius: 5,
+    orbitRadius: 45,
     textures: {
       texture: "/assets/saturnTexture.jpeg",
       ringTexture: "/assets/saturnRing.jpg",
@@ -81,9 +81,9 @@ const planetData = [
     id: 4,
     name: "Venus",
     type: "Planet",
-    position: [-12, 0, -1],
+    position: [-14, 0, -1],
     sphereGeometry: [1.95, 32, 32],
-    orbitRadius: 6,
+    orbitRadius: 14,
     textures: {
       texture: "/assets/venusTexture.jpeg",
     },
@@ -100,9 +100,9 @@ const planetData = [
     id: 5,
     name: "Neptune",
     type: "Planet",
-    position: [-50, 0, -20],
+    position: [-80, 0, -10],
     sphereGeometry: [1.6, 32, 32],
-    orbitRadius: 7,
+    orbitRadius: 81,
     textures: {
       texture: "/assets/neptuneTexture.jpeg",
     },
@@ -119,9 +119,9 @@ const planetData = [
     id: 6,
     name: "Jupiter",
     type: "Planet",
-    position: [-20, 0, 23],
+    position: [-16, 0, 23],
     sphereGeometry: [2.6, 32, 32],
-    orbitRadius: 8,
+    orbitRadius: 28,
     textures: {
       texture: "/assets/jupiterTexture.jpeg",
     },
@@ -137,9 +137,9 @@ const planetData = [
     id: 7,
     name: "Uranus",
     type: "Planet",
-    position: [-35, 0, 40],
+    position: [-20, 0, 50],
     sphereGeometry: [1.6, 32, 32],
-    orbitRadius: 9,
+    orbitRadius: 54,
     textures: {
       texture: "/assets/uranusTexture.jpeg",
     },
