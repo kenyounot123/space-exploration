@@ -8,4 +8,4 @@ Created an immersive and educational interactive website designed to take users 
 - threejs
 - code splitting/lazy loading
 
-## Visit here [https://vercel.com/kenyounot123s-projects/final-project/6TMvPcbe3yEaqhKH2SdQ97QKF4fa](https://vercel.com/kenyounot123s-projects/final-project/6TMvPcbe3yEaqhKH2SdQ97QKF4fa)
+## Visit here [https://final-project-kenyounot123-kenyounot123s-projects.vercel.app/](https://final-project-kenyounot123-kenyounot123s-projects.vercel.app/6TMvPcbe3yEaqhKH2SdQ97QKF4fa)
